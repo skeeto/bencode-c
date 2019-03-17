@@ -148,7 +148,6 @@ bencode_string(struct bencode *ctx)
     return BENCODE_STRING;
 }
 
-#include <stdio.h> /* fixme */
 int
 bencode_next(struct bencode *ctx)
 {
