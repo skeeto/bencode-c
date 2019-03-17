@@ -471,6 +471,26 @@ main(void)
         TEST("duplicate key");
     }
 
+    {
+        const char str[] = "d0:e";
+        struct expect seq[] = {
+            {BENCODE_DICT_BEGIN},
+            {BENCODE_STRING, ""},
+            {BENCODE_ERROR_INVALID}
+        };
+        TEST("missing value");
+    }
+
+    {
+        const char str[] = "d0:";
+        struct expect seq[] = {
+            {BENCODE_DICT_BEGIN},
+            {BENCODE_STRING, ""},
+            {BENCODE_ERROR_EOF}
+        };
+        TEST("missing value 2");
+    }
+
     printf("%d pass, %d fail\n", count_pass, count_fail);
     return count_fail ? EXIT_FAILURE : EXIT_SUCCESS;
 }
