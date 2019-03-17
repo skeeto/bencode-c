@@ -118,10 +118,10 @@ void bencode_free(struct bencode *);
  *
  * BENCODE_ERROR_BAD_KEY: An invalid key was found while parsing a
  * dictionary. The key is either a duplicate or not properly sorted. The
- * offended key can be found in the "tok" and "toklen" members.
+ * offending key can be found in the "tok" and "toklen" members.
  *
- * BENCODE_ERROR_OOM: The input was so deeply nested the parser ran of
- * memory for the stack.
+ * BENCODE_ERROR_OOM: The input was so deeply nested that the parser ran
+ * of memory for the stack.
  */
 int bencode_next(struct bencode *);
 
