@@ -71,7 +71,7 @@ void bencode_init(struct bencode *, const void *, size_t);
  * never freed with bencode_free(). This will reuse memory allocated for
  * the previous parsing tasks.
  */
-void bencode_reinit(struct bencode *ctx, const void *buf, size_t len);
+void bencode_reinit(struct bencode *, const void *, size_t);
 
 /**
  * Destroy the given encoder by freeing any resources.
